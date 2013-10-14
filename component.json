@@ -1,0 +1,22 @@
+{
+  "name": "cursor",
+  "repo": "shallker/cursor",
+  "description": "Get cursor infos in a text input",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "*"  
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "lib/cursor.js",
+    "lib/marker.js",
+    "shim/HTMLInputElement.prototype.setRangeText.js",
+    "shim/HTMLInputElement.prototype.setSelectionRange.js",
+    "shim/HTMLTextAreaElement.prototype.setRangeText.js",
+    "shim/HTMLTextAreaElement.prototype.setSelectionRange.js"
+  ]
+}
