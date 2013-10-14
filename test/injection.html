@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><style type="text/css">textarea {
+  width: 500px;
+  height: 200px;
+  outline: none;
+}
+#test {
+  width: 5px;
+  height: 10px;
+  background: #aaa;
+  position: absolute;
+}
+</style>
+  </head>
+  <body>
+    <textarea id="textarea">hello world</textarea>
+    <div id="test"></div>
+    <script src="../build/build.js"></script>
+    <script>
+      var Cursor = require('cursor');
+      var textarea = document.getElementById('textarea');
+      
+      textarea.cursor = Cursor.call(textarea);
+      //- textarea.cursor.position
+      //- textarea.cursor.pageX
+      //- textarea.cursor.pageY
+      //- textarea.cursor.offsetX
+      //- textarea.cursor.offsetY
+      
+      textarea.addEventListener('keyup', function (keyup) {
+        test.style.top = textarea.cursor.pageTop + textarea.cursor.height + 'px';
+        test.style.left = textarea.cursor.pageLeft + 'px';
+      });
+    </script>
+  </body>
+</html>

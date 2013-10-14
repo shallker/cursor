@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <textarea id="textarea">hello world</textarea>
+    <script src="../build/build.js"></script>
+    <script>
+      var Cursor = require('cursor');
+      var textarea = document.getElementById('textarea');
+      var test = document.getElementById('test');
+      
+      textarea.setSelectionRange(4, 4);
+      
+      var cursor = Cursor.call(textarea);
+      
+      console.log('cursor.offsetLeft', cursor.offsetLeft)
+      console.log('cursor.offsetTop', cursor.offsetTop)
+      console.log('cursor.pageLeft', cursor.pageLeft)
+      console.log('cursor.pageTop', cursor.pageTop)
+      console.log('cursor.height', cursor.height)
+      
+    </script>
+  </body>
+</html>
