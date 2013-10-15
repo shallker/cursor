@@ -1,0 +1,32 @@
+extends layout/index
+block styles
+  :stylus
+    input
+      outline none
+
+    #test
+      width 5px
+      height 10px
+      background #AAA
+      position absolute
+
+append content
+  input#input hello world
+  #test
+
+append scripts
+  script
+    var cursor = require('cursor');
+    var input = document.getElementById('input');
+
+    input.cursor = cursor.call(input);
+    //- input.cursor.position
+    //- input.cursor.pageX
+    //- input.cursor.pageY
+    //- input.cursor.offsetX
+    //- input.cursor.offsetY
+
+    input.addEventListener('keyup', function (keyup) {
+      test.style.top = input.cursor.pageTop + input.cursor.height + 'px';
+      test.style.left = input.cursor.pageLeft + 'px';
+    });
