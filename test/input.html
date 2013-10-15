@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><style type="text/css">input {
+  outline: none;
+}
+#test {
+  width: 5px;
+  height: 10px;
+  background: #aaa;
+  position: absolute;
+}
+</style>
+  </head>
+  <body>
+    <input id="input">
+    <div id="test"></div>
+    <script src="../build/build.js"></script>
+    <script>
+      var cursor = require('cursor');
+      var input = document.getElementById('input');
+      
+      input.cursor = cursor.call(input);
+      //- input.cursor.position
+      //- input.cursor.pageX
+      //- input.cursor.pageY
+      //- input.cursor.offsetX
+      //- input.cursor.offsetY
+      
+      input.addEventListener('keyup', function (keyup) {
+        test.style.top = input.cursor.pageTop + input.cursor.height + 'px';
+        test.style.left = input.cursor.pageLeft + 'px';
+      });
+    </script>
+  </body>
+</html>
