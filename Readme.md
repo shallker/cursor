@@ -29,10 +29,12 @@ Get or replace the text after cursor
 
 ## Test
   http://shallker.github.io/cursor/test/index.html   
-  http://shallker.github.io/cursor/test/injection.html   
+  http://shallker.github.io/cursor/test/input.html   
+  http://shallker.github.io/cursor/test/textarea.html   
 
 
 ## Todo
+- work with input
 - remove jQuery dependency
 
 ## License
