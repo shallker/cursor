@@ -19,15 +19,22 @@
 #### .pageTop
 #### .pageLeft
 #### .insert(String text)
-#### .before(String text)
-#### .after(String text)
+Insert text after cursor
+
+#### .before([String text])
+Get or replace the text before cursor
+
+#### .after([String text])
+Get or replace the text after cursor
 
 ## Test
   http://shallker.github.io/cursor/test/index.html   
-  http://shallker.github.io/cursor/test/injection.html   
+  http://shallker.github.io/cursor/test/input.html   
+  http://shallker.github.io/cursor/test/textarea.html   
 
 
 ## Todo
+- work with input
 - remove jQuery dependency
 
 ## License
